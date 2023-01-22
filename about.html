@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleAB.css">
+    <title>about</title>
+</head>
+<body>
+    
+      <!--------------- navbar starts here --------------->
+
+
+            
+      <nav class="nav">
+        <span id="brand">
+             
+        </span>
+
+        <ul id="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="services.html">Services</a></li>
+              
+              <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div id="toggle">
+              <div class="span">menu</div>
+        </div>
+
+  </nav>
+
+  <div id="resize">
+        <div class="close-btn">close</div>
+
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="services.html">Services</a></li>
+          
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+  </div>
+
+  <!--------------- navbar ends here --------------->
+    
+<!----smooth-scroll nton nton------>
+ 
+          <div class="smooth-scroll-wrapper">
+              <div class="content">
+                  <section>
+                      <div>
+                          <img src="s&s setting.jpg" />
+                          <h1>decor</h1>
+                          <h3>
+                              We work with the very best when it comes to our decor, only the very best materials and equiptment
+                              is usedto ensure that everything goes is at the level of our clients caliber.
+                          </h3>
+                      </div>
+                      <div>
+                          <img src="braii.jpg" />
+                          <h3>we do everything for your special day there is even people that can assist with the catering and 
+                              ensure that the food at your function is at the outmost best.
+                          </h3>
+                          <h4>
+                             All you have to do is leave everything to our talented stuff and just grab your self a drink and watch 
+                             the magic unfold.
+                          </h4>
+                      </div>
+                      <div>
+                          <img src="b&w bmw.jpg" />
+                          <h1>photographer</h1>
+                         
+                           <h3>DalaGufance is the man in charge of the lence, this talented young men will make sure that every moment is pefectly
+                             captured and up to satifactory stardard you can rest assured..
+                           </h3>
+
+                           <div class="button">
+                              <a href="/index.html">
+                                <centre>
+                                    <h2>Return home</h2>
+                                </centre>
+                              </a>
+                              </div>
+                      </div>
+                  </section>
+              </div>
+          </div>
+  
+          <script>
+              const body = document.body,
+                  scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+                  height = scrollWrap.getBoundingClientRect().height - 1,
+                  speed = 0.04;
+  
+              var offset = 0;
+  
+              body.style.height = Math.floor(height) + "px";
+  
+              function smoothScroll() {
+                  offset += (window.pageYOffset - offset) * speed;
+  
+                  var scroll = "translateY(-" + offset + "px) translateZ(0)";
+                  scrollWrap.style.transform = scroll;
+  
+                  callScroll = requestAnimationFrame(smoothScroll);
+              }
+  
+              smoothScroll();
+              const content = document.querySelector("section");
+              let currentPos = window.pageYOffset;
+  
+              const callDistort = function () {
+                  const newPos = window.pageYOffset;
+                  const diff = newPos - currentPos;
+                  const speed = diff * 0.35;
+  
+                  content.style.transform = "skewY(" + speed + "deg)";
+                  currentPos = newPos;
+                  requestAnimationFrame(callDistort);
+              };
+  
+              callDistort();
+
+              </script>
+              <!------------button script-->
+ 
